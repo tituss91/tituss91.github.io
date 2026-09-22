@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>[YOUR NAME] — Making things work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,440;0,9..144,560;1,9..144,440&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --ink: #17181B;
+    --ink-soft: #46484E;
+    --line: #E7E5E0;
+    --muted: #8A8C90;
+    --accent: #33414D;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; }
+  body { -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 88px 24px 90px; }
+
+  .kicker {
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 440;
+    font-size: clamp(30px, 6.4vw, 42px);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin: 0 0 22px;
+    max-width: 15ch;
+  }
+  .lede {
+    font-size: 16.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 50ch;
+    margin: 0;
+  }
+  .meta {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-top: 26px;
+  }
+  .meta a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--line); }
+
+  section { margin-top: 72px; }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 440;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .section-note {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 48ch;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  .offer {
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .offer:last-child { border-bottom: 1px solid var(--line); }
+  .offer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .offer .name { font-family: 'Fraunces', serif; font-size: 17.5px; font-weight: 440; }
+  .offer .time { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+  .offer .desc { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; max-width: 48ch; margin-top: 4px; }
+  .offer .example { font-size: 13px; color: var(--muted); line-height: 1.55; max-width: 48ch; margin-top: 10px; }
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px; height: 17px;
+    margin-right: 9px;
+    color: var(--accent);
+    vertical-align: -3px;
+  }
+  .icon svg { width: 100%; height: 100%; }
+  .btn .icon { color: currentColor; width: 15px; height: 15px; margin-right: 7px; vertical-align: -2px; }
+  .section-title .icon { color: var(--accent); vertical-align: -3px; }
+
+  .status {
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 20px 22px;
+  }
+  .status .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 9px;
+    vertical-align: middle;
+  }
+  .status .status-title { font-size: 14px; font-weight: 600; }
+  .status .status-body { font-size: 13.5px; color: var(--ink-soft); margin-top: 8px; line-height: 1.6; }
+
+  .principle {
+    font-family: 'Fraunces', serif;
+    font-weight: 440;
+    font-size: 18px;
+    line-height: 1.55;
+    max-width: 46ch;
+    color: var(--ink);
+  }
+
+  .contact-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--ink);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13.5px;
+    padding: 12px 22px;
+    border-radius: 2px;
+    text-decoration: none;
+  }
+  .btn.ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+
+  footer {
+    margin-top: 90px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Mumbai — NGOs & small teams</div>
+  <h1>I make the messy parts of an organization work again.</h1>
+  <p class="lede">
+    Knowledge that leaves when someone does. Processes nobody follows. Five versions of one file.
+    I find where the breakdown actually is, then build a small, AI assisted fix people keep using
+    after month one.
+  </p>
+  <div class="meta">[YOUR NAME] · <a href="mailto:[your email]">[your email]</a> · <a href="[LinkedIn URL]">LinkedIn</a></div>
+
+  <section>
+    <div class="section-title">What you can hire me for</div>
+    <div class="section-note">Small, bounded engagements. Each one ends with something real in your hands.</div>
+
+    <div class="offer">
+      <div class="offer-top">
+        <div class="name"><span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/></svg>
+        </span>Knowledge & Ops Audit</div>
+        <div class="time">1 week</div>
+      </div>
+      <div class="desc">A sharp look at where information and process break down in your team — specific bottlenecks, quick wins, no generic checklist.</div>
+      <div class="example">Example: five people, five different versions of the same onboarding doc → one clear source, mapped in a week.</div>
+    </div>
+
+    <div class="offer">
+      <div class="offer-top">
+        <div class="name"><span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 1 5.4-5.4l-3-3-3 3z"/></svg>
+        </span>AI Powered Fix Sprint</div>
+        <div class="time">2–3 weeks</div>
+      </div>
+      <div class="desc">One real bottleneck, one working fix — a searchable knowledge base, an onboarding system, a process automation — built and handed over ready to use.</div>
+      <div class="example">Example: scattered WhatsApp answers and old emails → a searchable FAQ the whole team actually opens.</div>
+    </div>
+
+    <div class="offer">
+      <div class="offer-top">
+        <div class="name"><span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8.5" r="2.6"/><circle cx="16" cy="8.5" r="2.6"/><path d="M2.5 19c.6-3 2.8-5 5.5-5s4.9 2 5.5 5"/><path d="M10.5 19c.6-3 2.8-5 5.5-5s4.9 2 5.5 5"/></svg>
+        </span>Adoption Coaching</div>
+        <div class="time">Ongoing</div>
+      </div>
+      <div class="desc">The fix only matters if people use it. I help teams get past the quiet resistance that kills good systems.</div>
+      <div class="example">Example: a new filing system launches well, then usage drops in week three → I find out why and fix the habit, not just the tool.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 3.2"/></svg></span>Right now</div>
+    <div class="status">
+      <div><span class="dot"></span><span class="status-title">Running a live pilot</span></div>
+      <div class="status-body">
+        Midway through a knowledge management sprint with an NGO — mapping where their information breaks down,
+        building the first fix. Result goes here once it's done.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.4 5.3 5.6.6-4.2 4 1.1 5.6L12 15.8 6.9 18.5 8 12.9 3.8 8.9l5.6-.6z"/></svg></span>How I work</div>
+    <p class="principle">
+      Most fixes fail for a human reason, not a technical one — structure can feel like a threat to
+      whoever's value is tied to being the one who "just knows." I design for that from day one.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Let's talk</div>
+    <div class="section-note" style="margin-bottom:16px;">If this sounds like your org, or you just want to compare notes.</div>
+    <div class="contact-row">
+      <a class="btn" href="mailto:[your email]"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>Email me</a>
+      <a class="btn ghost" href="[LinkedIn URL]"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7.5" y1="10" x2="7.5" y2="17"/><circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/><path d="M11.5 17v-4.2c0-1.6 1.1-2.6 2.6-2.6s2.4 1 2.4 2.6V17"/></svg></span>LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>Updated as real work happens.</footer>
+</div>
+</body>
+</html>
